@@ -13,7 +13,7 @@
 
   # Bootloader (GRUB)
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda"; # Ou /dev/nvme0n1, etc. Adaptez à votre disque
+  boot.loader.grub.device = "/dev/sdb"; # Ou /dev/nvme0n1, etc. Adaptez à votre disque
 
   # Réseau
   networking.networkmanager.enable = true; # Pour gérer Wi-Fi et connexions filaires
