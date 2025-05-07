@@ -1,0 +1,43 @@
+/* ~/nixos-config/waybar-style.css */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: MesloLGS NF, FontAwesome; /* Police Nerd Font et FontAwesome */
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.8); /* Fond semi-transparent */
+    color: #ffffff; /* Texte blanc */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#workspaces button:hover {
+    background: #4c566a;
+    border-bottom: 3px solid #eceff4;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#tray {
+    padding: 0 10px;
+    margin: 0 3px;
+    color: #ffffff;
+}

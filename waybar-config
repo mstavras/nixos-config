@@ -1,0 +1,75 @@
+// ~/nixos-config/waybar-config
+{
+    "layer": "top",
+    "position": "top", // Ou "bottom"
+    "height": 30,
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "clock", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            // ... ajoutez autant d'espaces de travail que nécessaire
+            "default": "",
+            "urgent": "",
+            "focused": ""
+        }
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% {icon} ",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "nm-connection-editor" // Ouvre l'éditeur de connexions NetworkManager
+    },
+    "bluetooth": {
+         "format": " {status}",
+         "format-disabled": "", // Ne rien afficher si désactivé
+         "format-connected": " {device_alias}",
+         "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+         "on-click": "blueman-manager", // Ouvre le gestionnaire Bluetooth
+         "interval": 15
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
