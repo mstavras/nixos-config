@@ -13,8 +13,10 @@
     microsoft-edge
     vscode
     gnome-text-editor
+    nautilus
     gvfs
     uv
+    wev
 
     # Outils pour l'écosystème Hyprland/Wayland
     waybar       # Barre d'état
