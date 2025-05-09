@@ -31,6 +31,8 @@
 
     # Utilitaires
     pavucontrol  # Contrôleur de volume PulseAudio (fonctionne avec PipeWire)
+    brightnessctl # Pour ajuster la luminosité de l'écran
+    pulseaudio-ctl # Pour contrôler PulseAudio (fonctionne avec PipeWire)
     # qutebrowser # Un autre navigateur pour explorer
   ];
 
