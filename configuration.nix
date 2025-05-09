@@ -12,8 +12,10 @@
   ];
 
   # Bootloader (GRUB)
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sdb"; # Ou /dev/nvme0n1, etc. Adaptez à votre disque
+  boot.loader.grub.enable = false;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = false;
+  #boot.loader.grub.device = "/dev/nvme0n1"; # Ou /dev/nvme0n1, etc. Adaptez à votre disque
 
   # Réseau
   networking.networkmanager.enable = true; # Pour gérer Wi-Fi et connexions filaires
@@ -49,6 +51,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true; # Optimise l'espace disque du Nix store
   nixpkgs.config.allowUnfree = true; # Permet d'installer des paquets non libres (comme VSCode ou Edge)
+  console.keyMap = "fr";
 
   # Audio avec PipeWire
   #sound.enable = true;

@@ -10,22 +10,11 @@
   home.packages = with pkgs; [
     # Terminal
     kitty
-
-    # Navigateur et IDE
-    # Pour Microsoft Edge (version stable de Linux)
-    microsoft-edge # Assurez-vous que allowUnfree = true; est dans configuration.nix
-    # Ou Firefox :
-    # firefox
-    vscode # Version OSS de VSCode
-    # Ou VSCode avec télémétrie Microsoft (nécessite allowUnfree = true) :
-    # vscode
-
-    # Éditeur de texte simple (GNOME Text Editor)
+    microsoft-edge
+    vscode
     gnome-text-editor
-
-    # Gestionnaire de fichiers
-    nautilus # GNOME Files, avec gvfs pour les fonctionnalités réseau
     gvfs
+    uv
 
     # Outils pour l'écosystème Hyprland/Wayland
     waybar       # Barre d'état
